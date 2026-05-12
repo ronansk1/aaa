@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Nome da aba no navegador-->
+    <title>GeoAgro - Monitoramento de Precisão</title>
+    <!-- CSS do Mapa -->
+    <link rel="stylesheet" href="https://unpkg.com" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <!--Nome da aplicação-->
+        <h2>GeoAgro 🛰️</h2> 
+        <!--Seleciona o local para visualizar-->
+        <div class="status-card">
+            <p>Fazenda selecionada:</p>
+            <strong id="coord-display">Clique no mapa para marcar</strong>
+        </div>
+        <div id="weather-info">
+            <p>Selecione um ponto para ver o clima real e o estresse hídrico.</p>
+        </div>
+        <button onclick="analisarClima()">Calcular Necessidade Hídrica</button>
+    </div>
+
+    <div id="map"></div>
+
+    <!-- Scripts: Leaflet primeiro, depois o seu -->
+    <script src="https://unpkg.com"></script>
+    <script src="script.js"></script>
+</body>
+</html>
